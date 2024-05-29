@@ -1,6 +1,5 @@
-// import Nook from "./07_Nook";
-
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const SecretRoom = ({ message1, onReply }) => {
   const [reply, setReply] = useState("");
@@ -9,11 +8,11 @@ const SecretRoom = ({ message1, onReply }) => {
     onReply(reply);
   };
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center pt-10">
       <h1>SecretRoom</h1>
       <p>Message for JSD7: {message1}</p>
       <textarea
-        className="mt-4 p-2 w-full text-white"
+        className="mt-4 p-2 w-full text-white bg-transparent border"
         value={reply}
         onChange={(e) => setReply(e.target.value)}
         placeholder="Type your reply here..."
@@ -26,6 +25,11 @@ const SecretRoom = ({ message1, onReply }) => {
       </button>
     </div>
   );
+};
+
+SecretRoom.propTypes = {
+  message1: PropTypes.string,
+  onReply: PropTypes.func,
 };
 
 export default SecretRoom;
