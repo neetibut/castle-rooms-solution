@@ -1,16 +1,18 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useContext, useState } from "react";
+// import PropTypes from "prop-types";
+import { MessageContext } from "../context/MessageContext";
 
-const SecretRoom = ({ message1, onReply }) => {
+const SecretRoom = () => {
+  const { message2, handleReply2 } = useContext(MessageContext);
   const [reply, setReply] = useState("");
 
   const handleSendReply = () => {
-    onReply(reply);
+    handleReply2(reply);
   };
   return (
     <div className="flex flex-col justify-center items-center pt-10">
       <h1>SecretRoom</h1>
-      <p>Message for JSD7: {message1}</p>
+      <p>Message for JSD7: {message2}</p>
       <textarea
         className="mt-4 p-2 w-full text-white bg-transparent border"
         value={reply}
@@ -27,9 +29,9 @@ const SecretRoom = ({ message1, onReply }) => {
   );
 };
 
-SecretRoom.propTypes = {
-  message1: PropTypes.string,
-  onReply: PropTypes.func,
-};
+// SecretRoom.propTypes = {
+//   message1: PropTypes.string,
+//   onReply: PropTypes.func,
+// };
 
 export default SecretRoom;

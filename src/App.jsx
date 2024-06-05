@@ -1,23 +1,20 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Castle from "./components/01_Castle";
+import { MessageContext } from "./context/MessageContext";
 
 function App() {
-  const [replyMessage, setReplyMessage] = useState("");
+  const { replyMessage2, message2 } = useContext(MessageContext);
 
-  const handleReply = (message) => {
-    setReplyMessage(message);
-  };
-  const message1 = "Do you love React?";
   return (
     <div className="py-10 flex flex-col justify-center items-center min-h-screen bg-[#242424] text-white">
-      <p>Message for JSD7: {message1}</p>
+      <p>Message for JSD7: {message2}</p>
       <p className="text-red-500">
         Reply from the Secret Room:{" "}
         <span className="text-blue-500">
-          {replyMessage ? replyMessage : "Waiting for a reply..."}
+          {replyMessage2 ? replyMessage2 : "Waiting for a reply..."}
         </span>
       </p>
-      <Castle message1={message1} onReply={handleReply} />
+      <Castle />
     </div>
   );
 }
