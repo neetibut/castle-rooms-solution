@@ -10,7 +10,7 @@ const MessageProvider = ({ children }) => {
     setReplyMessage2(message);
   };
 
-  const message2 = "Do you love React 2?";
+  const message2 = "Do you love React?";
 
   return (
     <MessageContext.Provider value={{ replyMessage2, handleReply2, message2 }}>

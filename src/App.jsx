@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="py-10 flex flex-col justify-center items-center min-h-screen bg-[#242424] text-white">
-      <p>Message for JSD7: {message2}</p>
+      <p>Message for JSD8: {message2}</p>
       <p className="text-red-500">
         Reply from the Secret Room:{" "}
         <span className="text-blue-500">
