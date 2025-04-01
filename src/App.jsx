@@ -1,5 +1,6 @@
-import { useContext } from "react";
 import Castle from "./components/01_Castle";
+
+import { useContext } from "react";
 import { MessageContext } from "./context/MessageContext";
 
 export default function App() {
