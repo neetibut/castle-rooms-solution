@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Nook from "./08_Nook";
 
 export default function Gallery() {

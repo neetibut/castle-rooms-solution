@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Room from "./04_Room";
 
 export default function Chamber() {

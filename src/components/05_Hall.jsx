@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Corridor from "./06_Corridor";
 
 export default function Hall() {

@@ -1,7 +1,6 @@
-import Castle from "./components/01_Castle";
-
 import { useContext } from "react";
 import { MessageContext } from "./context/MessageContext";
+import Castle from "./components/01_Castle";
 
 export default function App() {
   const { question, handleQuestion, answer } = useContext(MessageContext);
@@ -18,7 +17,7 @@ export default function App() {
       <textarea
         value={question}
         onChange={handleQuestion}
-        className="text-black rounded px-2 py-1"
+        className="bg-white text-black rounded px-2 py-1"
         placeholder="Type your message here..."
       />
       <p className="text-green-300">

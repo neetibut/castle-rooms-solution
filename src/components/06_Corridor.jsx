@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Gallery from "./07_Gallery";
 
 export default function Corridor() {

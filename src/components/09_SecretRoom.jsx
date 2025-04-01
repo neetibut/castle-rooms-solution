@@ -14,7 +14,7 @@ export default function SecretRoom() {
         </span>
       </p>
       <textarea
-        className="text-black rounded px-2 py-1"
+        className="bg-white text-black rounded px-2 py-1"
         value={answer}
         onChange={handleAnswer}
         placeholder="Type your reply here..."

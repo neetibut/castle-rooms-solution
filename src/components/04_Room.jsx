@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Hall from "./05_Hall";
 
 export default function Room() {

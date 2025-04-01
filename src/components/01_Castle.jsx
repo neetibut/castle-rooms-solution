@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Tower from "./02_Tower";
 
 export default function Castle() {

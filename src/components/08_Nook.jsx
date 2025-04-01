@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import SecretRoom from "./09_SecretRoom";
 
 export default function Nook() {

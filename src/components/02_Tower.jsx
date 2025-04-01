@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Chamber from "./03_Chamber";
 
 export default function Tower() {
