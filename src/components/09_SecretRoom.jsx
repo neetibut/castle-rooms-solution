@@ -1,30 +1,30 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 
-const SecretRoom = () => {
-  const { message2, handleReply2 } = useContext(MessageContext);
-  const [reply, setReply] = useState("");
+export default function SecretRoom() {
+  const { question, answer, handleAnswer } = useContext(MessageContext);
 
   return (
-    <div className="flex flex-col justify-center items-center pt-10">
+    <div className="flex flex-col justify-center items-center py-10 gap-y-4 bg-gray-700 w-[100%]">
       <h1>SecretRoom</h1>
-      <p>Message for JSD8: {message2}</p>
+      <p className="text-purple-300">
+        Message for JSD9:{" "}
+        <span className="text-yellow-300">
+          {question ? question : "Waiting for a message..."}
+        </span>
+      </p>
       <textarea
-        className="mt-4 p-2 w-full text-white bg-transparent border"
-        value={reply}
-        onChange={(e) => setReply(e.target.value)}
+        className="text-black rounded px-2 py-1"
+        value={answer}
+        onChange={handleAnswer}
         placeholder="Type your reply here..."
       />
-      <button
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-        onClick={() => {
-          handleReply2(reply);
-        }}
-      >
-        Send Reply
-      </button>
+      <p className="text-green-300">
+        Reply to the outside:{" "}
+        <span className="text-yellow-300">
+          {answer ? answer : "Waiting for a reply..."}
+        </span>
+      </p>
     </div>
   );
-};
-
-export default SecretRoom;
+}

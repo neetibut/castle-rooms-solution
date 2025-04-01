@@ -4,16 +4,21 @@ import { createContext, useState } from "react";
 const MessageContext = createContext();
 
 const MessageProvider = ({ children }) => {
-  const [replyMessage2, setReplyMessage2] = useState("");
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
 
-  const handleReply2 = (message) => {
-    setReplyMessage2(message);
+  const handleQuestion = (e) => {
+    setQuestion(e.target.value);
   };
 
-  const message2 = "Do you love React?";
+  const handleAnswer = (e) => {
+    setAnswer(e.target.value);
+  };
 
   return (
-    <MessageContext.Provider value={{ replyMessage2, handleReply2, message2 }}>
+    <MessageContext.Provider
+      value={{ question, answer, handleQuestion, handleAnswer }}
+    >
       {children}
     </MessageContext.Provider>
   );
